@@ -2,7 +2,7 @@
 layout: post
 title: Java 8 Lambda
 categories: java
-tags: [java]
+tags: [JAVA]
 ---
 
 ### 함수형 인터페이스

@@ -2,7 +2,7 @@
 layout: post
 title: Java 8 Optional
 categories: java
-tags: [java]
+tags: [JAVA]
 ---
 
 ## Optional instead of Null Reference

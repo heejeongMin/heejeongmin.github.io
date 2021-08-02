@@ -2,7 +2,7 @@
 layout: post
 title: Junit4에서 Junit5
 categories: java
-tags: [java, junit]
+tags: [JAVA, JUNIT]
 ---
 
 ### Junit4에서 Junit5로 넘어갈때 어떤 변화 ?
