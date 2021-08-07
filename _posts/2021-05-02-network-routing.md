@@ -2,7 +2,7 @@
 layout: post
 title: 라우팅
 subtitle: 그림으로 배우는 네트워크 원리
-categories: infrastructure
+categories: network
 tags: [NETWORK, INFRASTRUCTURE]
 ---
 

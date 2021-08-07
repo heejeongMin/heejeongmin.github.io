@@ -2,7 +2,7 @@
 layout: post
 title: 네트워크를 만드는 것
 subtitle: 그림으로 배우는 네트워크 원리
-categories: infrastructure
+categories: network
 tags: [NETWORK, INFRASTRUCTURE]
 ---
 
