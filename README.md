@@ -16,11 +16,5 @@
 
 
 
-[<img src="/assets/images/banners/github-square-brands.svg" width="50px" target="_blank" style="display:inline-block; float: left; margin-right:10px;">](https://github.com/heejeongMin)
-
-[<img src="/assets/images/banners/linkedin-brands.svg" width="50px" target="_blank" style="display:inline-block; float: left; margin-right:10px;">](https://www.linkedin.com/in/heejeong)
-
-[<img src="/assets/images/banners/envelope-square-solid.svg" width="50px" target="_blank" style="display:inline-block; float: left; margin-right:10px;">](hj.min1031@gmail.com)
-
-[<img src="/assets/images/banners/instagram-square-brands.svg" width="50px" target="_blank" style="display:inline-block; float: left; margin-right:10px;">](https://www.instagram.com/panchothedachs/)  
+[<img src="/assets/images/banners/github-square-brands.svg" width="50px" target="_blank" style="display:inline-block; float: left; margin-right:10px;">](https://github.com/heejeongMin) [<img src="/assets/images/banners/linkedin-brands.svg" width="50px" target="_blank" style="display:inline-block; float: left; margin-right:10px;">](https://www.linkedin.com/in/heejeong) [<img src="/assets/images/banners/envelope-square-solid.svg" width="50px" target="_blank" style="display:inline-block; float: left; margin-right:10px;">](hj.min1031@gmail.com) [<img src="/assets/images/banners/instagram-square-brands.svg" width="50px" target="_blank" style="display:inline-block; float: left; margin-right:10px;">](https://www.instagram.com/panchothedachs/)  
 
