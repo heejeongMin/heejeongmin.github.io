@@ -15,12 +15,12 @@
 [![stats](https://github-readme-stats.vercel.app/api?username=heejeongMin&show_icons=true&theme=cobalt&count_private=true&hide=issues)]()  
 
 ## ✨ StudyGroup And Community ✨
-####Devkids
 
+[<img src="/assets/images/banners/panic.png" width="120px" height="90px" target="_blank" style="float:left">](https://devkids-workspace.slack.com)
+
+#### Devkids
 since 2020.09 ~ current  
 각자 다른 곳에서 다른 언어로 일하지만 방향은 같은 주니어 개발자들의 공부 모임
-
-[<img src="/assets/images/banners/panic.png" width="50px" target="_blank">](https://devkids-workspace.slack.com)
 
 
 ## ✨ Contact ✨
