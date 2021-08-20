@@ -8,7 +8,7 @@
 ## ✨ DevOps and Others ✨
 [![aws](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=AmazonAWS&logoColor=white)]() [![bamboo](https://img.shields.io/badge/Bamboo-0052CC?style=flat-square&logo=Bamboo&logoColor=white)]() [![jenkins](https://img.shields.io/badge/Jenkins-D24939?style=flat-square&logo=Jenkins&logoColor=white)]() [![docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=Docker&logoColor=white)]() [![jira](https://img.shields.io/badge/Jira-0052CC?style=flat-square&logo=Jira&logoColor=white)]() [![slack](https://img.shields.io/badge/Slack-4A154B?style=flat-square&logo=4A154B&logoColor=white)]()
 
-## ✨ Project ✨
+## ✨ Toy Project ✨
 [![myWebsite](https://img.shields.io/badge/MyWebsite-3E4348?style=flat-square&logo=AirPlayVideo&logoColor=white)](https://heejeongmin.github.io/) [![Sabang](https://img.shields.io/badge/Sabang-3E4348?style=flat-square&logo=AirPlayVideo&logoColor=white)](https://github.com/heejeongMin/sabangSpring) [![Doroomi](https://img.shields.io/badge/Doroomi-3E4348?style=flat-square&logo=AirPlayVideo&logoColor=white)](https://github.com/heejeongMin/com-workbook-crane)
 
 
