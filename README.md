@@ -14,7 +14,16 @@
 
 [![stats](https://github-readme-stats.vercel.app/api?username=heejeongMin&show_icons=true&theme=cobalt&count_private=true&hide=issues)]()  
 
+## ✨ StudyGroup And Community ✨
+*Devkids*
+
+since 2020.09 ~ current
+
+각자 다른 곳에서 다른 언어로 일하지만 방향은 같은 주니어 개발자들의 공부 모임
+
+[<img src="/assets/images/banners/panic.png" width="50px" target="_blank"">](https://devkids-workspace.slack.com)
 
 
+## ✨ Contact ✨
 [<img src="/assets/images/banners/github-square-brands.svg" width="50px" target="_blank" style="display:inline-block; float: left; margin-right:10px;">](https://github.com/heejeongMin) [<img src="/assets/images/banners/linkedin-brands.svg" width="50px" target="_blank" style="display:inline-block; float: left; margin-right:10px;">](https://www.linkedin.com/in/heejeong) [<img src="/assets/images/banners/envelope-square-solid.svg" width="50px" target="_blank" style="display:inline-block; float: left; margin-right:10px;">](hj.min1031@gmail.com) [<img src="/assets/images/banners/instagram-square-brands.svg" width="50px" target="_blank" style="display:inline-block; float: left; margin-right:10px;">](https://www.instagram.com/panchothedachs/)  
 
