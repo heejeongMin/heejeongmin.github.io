@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 레플리케이션과 그 밖의 컨트롤러 : 관리되는 파드 배포
+title: 레플리케이션과 그 밖의 컨트롤러 - 관리되는 파드 배포
 subtitle: Kubernetes In Action
 categories: kubernetes
 tags: [KUBERNETES, CONTAINER, INFRASTRUCTURE]

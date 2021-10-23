@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 파드: 쿠버네티스에서 컨테이너 실행
+title: 파드 - 쿠버네티스에서 컨테이너 실행
 subtitle: Kubernetes In Action
 categories: kubernetes
 tags: [KUBERNETES, CONTAINER, INFRASTRUCTURE]
