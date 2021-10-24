@@ -28,8 +28,8 @@ docker image pull gihyodocker/echo:latest
 | :-------------- | :-------------- | :-------------- |
 | docker image pull | 도커 허브에서 이미지 다운로드 | =docker pull|
 | docker image build | 도커 이미지 빌드 | =docker build, -t 태그 |
-| docker image ls | 도커 이미지 리스 | = docker run |
-| docker container run | 도커 컨테이너 실행  | -p : 포트 |
+| docker image ls | 도커 이미지 리스트 | -q : 컨테이너 아이디만 조회 가능 |
+| docker container run | 도커 컨테이너 실행  | = docker run -p : 포트 |
 | ^^ | ^^ | -d=true or -d : 컨테이너 실행시 로그 올라오는데 안봐도 되면 백그라운드 모드로 실행|
 | ^^ | ^^ | -t : Allocate a pseudo-tty (foreground mode에서 컨테이너에 터미널로 접속할 수 있게 해준다. [-t explanation])|
 | docker container ls | 도커 컨테이너 리스트 조회 | "docker ps" 와 같고, "docker ps -a"인 경우 실행중이지 않고, 삭제되지 않은 컨테이너를 볼 수 있다. |
@@ -83,14 +83,14 @@ CMD ["go", "run", "/echo/main.go"]
 | 인스트럭션(명령) | 용도 | remark |
 | :-------------- | :-------------- | :-------------- |
 | FROM | 도커 이미지의 바탕이 될 베이스 | 도커 허브에서 받아오며 ':' 뒤는 태그라고 하며 이미지 버전을 구별하는 식별자 |
-| ^^ | ^^ | 도커 이미지는 각자 고유의 해시값을 갖는데, 태그가 없으면 해시만으로 구별해야 하여 쉽게 파악이 안되니 태그를 붙이는것이 좋다.|
+||| 도커 이미지는 각자 고유의 해시값을 갖는데, 태그가 없으면 해시만으로 구별해야 하여 쉽게 파악이 안되니 태그를 붙이는것이 좋다.|
 | RUN | 도커 이미지를 실행할 때 컨테이너 안에서 실행할 명령을 정의 | 예제에서는 애플리케이션을 배치하기 위한 /echo 디렉토리를 만든다. |
-| ^^ | ^^ | 이미지를 빌드할 때 실행된다. |
+||| 이미지를 빌드할 때 실행된다. |
 | COPY | 도커가 동작중인 호스트 머신의 파일/디렉토리 -> 도커 컨테이너 안으로 복사 | 비슷한 기능으로 ADD가 있다.|
 | CMD | 도커 컨테이너를 실행할 때 안에서 실행할 프로세스 | 명령을 공백으로 나눈 배열로 구성되며, 컨테이너를 시작할 때 1회 실행된다. |
-| ^^ | ^^ | CMD["실행파일", "인자1", "인자2"] -> 실행파일에 인자를 전달. 권장 사용방식 |
-| ^^ | ^^ | CMD "명령인자" "인자1" "인자2" -> 명령과 인자 지정으로 셸에서 실행되므로 셸에 정의된 변수를 참조할 수 있다. |
-| ^^ | ^^ | CMD ["인자1", "인자2"] -> ENTRYPOINT에 지정된 명령어에 사용할 인자를 전달한다. |
+||| CMD["실행파일", "인자1", "인자2"] -> 실행파일에 인자를 전달. 권장 사용방식 |
+||| CMD "명령인자" "인자1" "인자2" -> 명령과 인자 지정으로 셸에서 실행되므로 셸에 정의된 변수를 참조할 수 있다. |
+||| CMD ["인자1", "인자2"] -> ENTRYPOINT에 지정된 명령어에 사용할 인자를 전달한다. |
 | LABEL | 이미지를 만든 사람의 이름 등을 적을 수 있다. | |
 | ENV | 컨테이너 안에서 활용할 수 있는 환경변수 지정 | |
 | ARG | 이미지 빌드 시 정보를 함께 넣기 위한 용도로 빌드할때만 사용된다. | |
@@ -164,6 +164,7 @@ main.go 코드를 보면 8080을 리스닝하고 있지만 ```curl http://localh
 - 호스트 포트를 생략하고 포트포워딩을 사용하면 도커가 자동으로 할당함으로 부여받은 포트로 접근하면 된다. 
         ![ephemeral_port.png](/assets/images/docker/ch02/ephemeral_port.png)
 
+![port_forwarding.png](/assets/images/docker/ch02/port_forwarding.png)
 
 ### 02 도커 이미지 다루기 
 
@@ -191,9 +192,10 @@ main.go 코드를 보면 8080을 리스닝하고 있지만 ```curl http://localh
    * 목록 중 네임스페이스가 생략되어 있는 mysql을 볼 수 있는데 이 리포지토리가 공식 mysql 리포지토리이다. 
    공식 리포지토리의 네임스페이스는 모두 library이며 생략할 수 있다.
    
-- 리포지토리 검색은 가능하지만, 리포지토리가 관리하는 도커 이미지의 태그까지는 검색할 수 없으니 다음 API를 사용한다. 
-```shell script
-curl -s 'https://hub.docker.com/v2/repositories/library/golang/tags/?page_size=10' | jq -r '.results[].name'
+- 리포지토리 검색은 가능하지만, 리포지토리가 관리하는 도커 이미지의 태그까지는 검색할 수 없으니 다음 API를 사용한다.
+ 
+```text
+  curl -s 'https://hub.docker.com/v2/repositories/library/golang/tags/?page_size=10' | jq -r '.results[].name'
 ```
    ![tag_api.png](/assets/images/docker/ch02/tag_api.png)
 
@@ -351,6 +353,7 @@ docker container cp echo:/echo/main.go .
         - echo : 컨테이너 이름
         - image : 도커 이미지
         - ports : 포트 포워딩 설정
+        
 ```yaml
 version: "3"
 services:
@@ -359,6 +362,7 @@ services:
     ports:
       - 9000:8080
 ```
+
 - docker-compose.yml에 기술된 컨테이너를 모두 실행하려면 ```docker compose up```을 활용하면 된다. 
 ![docker_compose_up.png](/assets/images/docker/ch02/docker_compose_up.png)
 
@@ -418,6 +422,7 @@ services:
    - 마스터 컨테이너가 어떻게 슬레이브 컨테이너를 찾아 추가할 것이가는, 마스터 컨테이너 설정에 links 속성을 사용하여 services 그룹에 해당하는 다른 컨테이너와 통신할 수 있다. 
  
 5. 최종 yml
+
 ```yaml
 version: "3"
 services:
@@ -437,6 +442,7 @@ services:
     environment:
       - JENKINS_AGENT_SSH_PUBKEY=
 ```  
+
 ![jenkins_master_slave.png](/assets/images/docker/ch02/jenkins_master_slave.png)
 
 - docker compose up으로 띄우고 난뒤 jenkins에 접속하여 노드관리에서 slave node추가가 필요. 
