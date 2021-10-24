@@ -30,8 +30,8 @@ docker image pull gihyodocker/echo:latest
 | docker image build | 도커 이미지 빌드 | =docker build, -t 태그 |
 | docker image ls | 도커 이미지 리스트 | -q : 컨테이너 아이디만 조회 가능 |
 | docker container run | 도커 컨테이너 실행  | = docker run -p : 포트 |
-| ^^ | ^^ | -d=true or -d : 컨테이너 실행시 로그 올라오는데 안봐도 되면 백그라운드 모드로 실행|
-| ^^ | ^^ | -t : Allocate a pseudo-tty (foreground mode에서 컨테이너에 터미널로 접속할 수 있게 해준다. [-t explanation])|
+||| -d=true or -d : 컨테이너 실행시 로그 올라오는데 안봐도 되면 백그라운드 모드로 실행|
+||| -t : Allocate a pseudo-tty (foreground mode에서 컨테이너에 터미널로 접속할 수 있게 해준다. [-t explanation])|
 | docker container ls | 도커 컨테이너 리스트 조회 | "docker ps" 와 같고, "docker ps -a"인 경우 실행중이지 않고, 삭제되지 않은 컨테이너를 볼 수 있다. |
 | docker container stop [컨테이너 아이디 혹은 이름] | 도커 컨테이너 정지  |(docker stop)|
 | docker rm [컨테이너 아이디 혹은 이름] | 도커 컨테이너 삭제  ||
