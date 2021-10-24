@@ -447,7 +447,6 @@ services:
     - https://hub.docker.com/r/jenkins/ssh-agent
 - 에러2. 젠킨스를 실행하고 slave를 연결하려고하면 java를 찾지 못해서 에러가 난다. launch log에 보면 JAVA_HOME 경로가 나오는데 이 경로를 복사하여, 
 설정에서 고급에 자바 경로에 넣어준다. 
-![jenkins_java_path.png](/assets/images/docker/ch02/jenkins_java_path.png)
 ![jenkins_java_path_config.png](/assets/images/docker/ch02/jenkins_java_path_config.png)
 ![jenkins_complete.png](/assets/images/docker/ch02/jenkins_complete.png)
 
