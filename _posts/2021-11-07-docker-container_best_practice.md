@@ -249,7 +249,7 @@ services:
 ```
 ![dind_compose_up.png](/assets/images/docker/ch03/dind_compose_up.png)  
 
-- dind 컨테이너를 여러대 띄우기만 한 것이라 manager에게 스웜모드를 활성화 시켜준다. 
+- dind 컨테이너를 여러대 띄우기만 한 것이라 manager에게 스웜모드를 활성화 시켜준다. d
 ```docker
 docker container exec -it manager docker swarm init
 ```
