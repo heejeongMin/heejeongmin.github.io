@@ -1,7 +1,7 @@
 ---
 layout: post
 title: JPA
-categories: java
+categories: JAVA
 tags: [JAVA, JPA]
 ---
 

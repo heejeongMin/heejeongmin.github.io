@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 디코딩 경험 (sun.misc.Base64Encoder와 java.util.BASE64 및 디코딩 한글깨짐)
-categories: java
-tags: [Java]
+categories: JAVA
+tags: [JAVA]
 ---
 
 

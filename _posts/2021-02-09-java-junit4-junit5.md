@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Junit4에서 Junit5
-categories: java
+categories: JAVA
 tags: [JAVA, JUNIT]
 ---
 

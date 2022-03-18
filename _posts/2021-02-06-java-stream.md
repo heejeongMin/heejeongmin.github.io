@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Java 8 Stream
-categories: java
+categories: JAVA
 tags: [JAVA]
 ---
 
