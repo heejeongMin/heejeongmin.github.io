@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Java - 생성자 대신 정적 팩터리 메서드를 고려하라
+title: Item1 - 생성자 대신 정적 팩터리 메서드를 고려하라
 subtitle: Effective Java
 categories: JAVA
 tags: [JAVA]
@@ -19,17 +19,6 @@ tags: [JAVA]
        public static Boolean valueOf(boolean b) {
           return b ? Boolean.TRUE : Boolean.FALSE;
        }
-   ```
-   ```java
-       public static Dog from(DogInfo info) {
-          Dog dog = new Dog();
-          dog.id = info.getId();
-          dog.name = info.getName();
-          dog.gender = info.getGender();
-          dog.color = info.getColor();
-          dog.year = info.getYear();
-          return response;
-      }
    ```
  
   
@@ -97,7 +86,7 @@ tags: [JAVA]
 - 생성자가 없으니, 사용자는 정ㅈ거 팩터리 메서드 방식 클래스를 통해 인스턴스화 하는 방법을 찾아야 한다. 
 - 메서드 이름을 좀 더 명확하게 짓고, API문서를 통해 보완할 수 있다. 
   - from 
-    - 매개번수를 하나 받아서 해당 타입의 인스턴스를 반호나하는 형변환 메서드 
+    - 매개번수를 하나 받아서 해당 타입의 인스턴스를 반환하는 형변환 메서드 
     ```java
         Date date = Date.from(instance);
     ```
