@@ -6,12 +6,14 @@ categories: JAVA
 tags: [JAVA]
 ---
 ## 다 쓴 객체의 참조를 해제하라
-
 키워드 : Obsolete Reference, Garbage Collection, Memory Leak
-
-### Obsolete Reference (다 쓴 객체의 참조) & Garbage Collection (가비지 콜렉션)
-1. 정의 : 다시 참조 되지 않을 객체 
-2. 예시
+1. 
+2. 정의
+   1. Obsolete Reference : 다시 참조 되지 않을 객체 
+   2. Garbage Collection : Obsolete Reference 상태인 객체를 회수함. 
+   3. Memory Leak : 메모리가 할당 되었지만, 더 이상 메모리가 필요없는 객체에 대한 메모리가 릴리즈 되지 않는 현상
+   
+3. 예시
    ```java
    public class Stack {
        private Object[] elements; // !!전역변수!! 
@@ -51,16 +53,9 @@ tags: [JAVA]
       2. heap 메모리가 올라가면 올라가면 원래는 GC 대상이지만, 위의 예시에서는 pop을 하면서 element를 반환하지만 
          Object[] elements 배열에서 해당 객체 참조를 여전히 가지고 있기 때문에 가비지 컬렉터가 회수하지 못하게 된다. 
          반면 size (인덱스)는 이미 줄어들었기 때문에 더 이상 참조 되지 않게 되면서 obsolete reference 로 남게 되지만,  
-         GC가 회수 하지 않기 때문에 메모리 누수로 이어진다.  
-      ```text
-      Memory Leak (메모리 누수)
-       정의 : 메모리가 할당 되었지만, 더 이상 메모리가 필요없는 객체에 대한 메모리가 릴리즈 되지 않는 현상
-         In computer science, a memory leak is a type of resource leak that occurs 
-         when a computer program incorrectly manages memory allocations in a way that memory
-         which is no longer needed is not released.
-       ```
+         GC가 회수 하지 않기 때문에 메모리 누수로 이어진다.
 
-3. 해결방법
+4. 해결방법
    1. 불필요하게 메모리가 할당 되어 있는 객체의 참조 끊기
       ```java
        public Object pop() {
