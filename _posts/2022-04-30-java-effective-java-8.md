@@ -34,3 +34,71 @@ cleaner.clean();
   (https://stackoverflow.com/questions/48260485/what-is-a-native-peer)
 
 
+예시
+```java
+import java.lang.ref.Cleaner;
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+public class Room implements AutoCloseable {
+  private static final Cleaner cleaner = Cleaner.create(); //cleaner 생성
+  private final State state;  // 방의 상태
+  private final Cleaner.Cleanable cleanable;
+
+  public Room(int numJunkPiles){
+    state = new State(numJunkPiles);
+    cleanable = cleaner.register(this, state);
+  }
+
+  @Override
+  public void close(){
+    cleanable.clean();
+  }
+
+  private static class State implements Runnable {
+    int numJunkPiles; //쓰레기 수
+    State(int numJunkPiles) {
+      this.numJunkPiles = numJunkPiles;
+    }
+
+    @Override
+    public void run() {
+      log.info("방 청소");
+      numJunkPiles = 0;
+    }
+  }
+}
+```
+
+- try-with-resources (cleaner의 역할은 단순 안전망 ... )
+```java
+package com.workbook.crane.common.configuration;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+public class Adult {
+
+  //Audult
+  public static void main(String[] args) {
+    try (Room room = new Room(7)) { //방청소 출력
+      log.info("안녕~");//안녕 출력
+    }
+  }
+}
+```
+
+- cleaner만 믿기
+```java
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+public class Teenager {
+
+  public static void main(String[] args) {
+    new Room(99); //방청소 출력이 되지 않음 (명시적으로 room.close()를 호출해야면 해준다. 
+    System.out.println("아무렵"); //아무렴 출력
+  }
+}
+```
+
