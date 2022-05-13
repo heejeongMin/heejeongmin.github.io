@@ -2,7 +2,7 @@
 layout: post
 title: 쿠버네티스 클러스터 구축
 subtitle:  도커/쿠버네티스를 활용한 컨테이너 개발 실전 입문
-categories: 쿠버네티스
+categories: kubernetes
 tags: [GCP, Kubernetes]
 ---
 

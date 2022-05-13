@@ -2,7 +2,7 @@
 layout: post
 title: Item1 - 생성자 대신 정적 팩터리 메서드를 고려하라
 subtitle: Effective Java
-categories: JAVA
+categories: java
 tags: [JAVA]
 ---
 ## 생성자 대신 정적 팩터리 메서드를 고려하라

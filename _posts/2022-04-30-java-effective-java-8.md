@@ -2,7 +2,7 @@
 layout: post
 title: Item8- finalizer와 cleaner 사용을 피하라
 subtitle: Effective Java
-categories: JAVA
+categories: java
 tags: [JAVA]
 ---
 ## finalizer와 cleaner 사용을 피하라

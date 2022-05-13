@@ -2,7 +2,7 @@
 layout: post
 title: 마이크로서비스는 코드 작성 이상을 의미
 subtitle: 스프링 마이크로서비스 코딩 공작소
-categories: MICROSERVICE 
+categories: microservice 
 tags: [MICROSERVICE]
 ---
 ## 마이크로 서비스를 구축할때 고려해야할 서비스가 실행될 환경과 확장 및 회복성에 대한 방법을 고민해야한다.

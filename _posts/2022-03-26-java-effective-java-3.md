@@ -2,7 +2,7 @@
 layout: post
 title: Item3 - private 생성자나 열거 타입으로 싱글턴임을 보장하라
 subtitle: Effective Java
-categories: JAVA
+categories: java
 tags: [JAVA]
 ---
 ## private 생성자나 열거 타입으로 싱글턴임을 보장하라

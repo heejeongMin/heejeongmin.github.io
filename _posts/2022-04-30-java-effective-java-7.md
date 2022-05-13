@@ -2,7 +2,7 @@
 layout: post
 title: Item7 - 다 쓴 객체의 참조를 해제하라
 subtitle: Effective Java
-categories: JAVA
+categories: java
 tags: [JAVA]
 ---
 ## 다 쓴 객체의 참조를 해제하라
